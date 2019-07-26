@@ -143,5 +143,8 @@ friends: [
     },{
         title: "解旻的博客",
         href: "http://xieminis.me/"
+    },{
+        title: "一支笔",
+        href: "https://yizibi.github.io/"
     }
 ]
