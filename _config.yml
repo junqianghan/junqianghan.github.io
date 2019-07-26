@@ -1,5 +1,5 @@
 # Site settings
-title: Randle Blog
+title: Randle
 SEOTitle: Randle | Randle Blog
 header-img: img/home-bg.jpg
 email: junqiang_han@163.com
@@ -144,7 +144,7 @@ friends: [
         title: "解旻的博客",
         href: "http://xieminis.me/"
     },{
-        title: "一支笔",
+        title: "一之笔",
         href: "https://yizibi.github.io/"
     }
 ]
