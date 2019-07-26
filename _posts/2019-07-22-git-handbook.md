@@ -1,10 +1,10 @@
 ---
 layout:       post
 title:        "Git 速查手册"
+subtitle: Git hand book 
 date:         2019-07-22 23:45:00
 author:       "Randle"
 catalog:      false
-permalink: /:title.html
 comments: true
 tags:
     - Git
