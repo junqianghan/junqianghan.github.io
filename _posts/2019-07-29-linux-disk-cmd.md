@@ -27,6 +27,11 @@ fdisk -l  #列出所有分区表
 
 查看块设备的文件系统类型、LABEL、UUID等信息。
 
+```shell
+# blkid -t LABEL="config-2" -odevice
+```
+上述命令可以查看，label为config-2的设备，其设备名，挂载操作的时候使用。
+
 # df
 
 显示已挂载的文件系统，磁盘使用状况。常用命令：
