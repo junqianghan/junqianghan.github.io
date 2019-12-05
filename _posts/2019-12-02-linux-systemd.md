@@ -560,7 +560,6 @@ WantedBy=multi-user.target
 
 请看下面的例子。
 
-
 ```shell
 [Service]
 ExecStart=/bin/echo execstart1
@@ -569,6 +568,7 @@ ExecStart=/bin/echo execstart2
 ExecStartPost=/bin/echo post1
 ExecStartPost=/bin/echo post2
 ```
+
 上面这个配置文件，第二行`ExecStart`设为空值，等于取消了第一行的设置，运行结果如下。
 
 ```shell
