@@ -16,6 +16,7 @@ def main():
     for post in posts_remain:
     	web_post_name = post_dir+"/"+post
     	local_post_name = local_dir+"/"+post
+        print(local_post_name)
     	cp_cmd = "cp {web_post_name} {local_post_name}".format(
     		web_post_name=web_post_name,
     		local_post_name=local_post_name)
