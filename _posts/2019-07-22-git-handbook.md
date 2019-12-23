@@ -11,12 +11,10 @@ tags:
 ---
 
 
-[git 教程](https://www.yiibai.com/git)  
-[git 备忘](http://www.imooc.com/article/1111)
+
 
 ```shell
 # 提交
-
 git add file                # 工作区修改提交到暂存区
 git add .                   # 所有修改过的文件提交暂存区
 git rm file                 # 从版本库中删除文件
@@ -76,6 +74,12 @@ git fetch origin :dest                  # 本地创建新分支
 
 git branch -u o/master foo              # 本地 foo 分支跟踪远端 master 分支
 git branch --set-upstream-to=o/master foo   # 与上述写法相同，省略foo，当前分支跟踪
+# 默认合并方式(fast-forward)
+git merge --ff
+# 保留源分支信息，创建merge commit
+git merge --no-ff
+# 额外的commit包含所有源分支内容
+git merge --squash
 
 git remote -v                       # 查看地址和名称
 git remote show origin              # 查看远端状态
@@ -117,3 +121,9 @@ git config --global alias.ci commit
 git config --global alias.co checkout
 git config --global alias.lg 'log --graph --pretty=oneline --abbrev-commit'
 ```
+
+## 参考资料
+- [git 教程](https://www.yiibai.com/git)  
+- [git 备忘](http://www.imooc.com/article/1111)
+- [如何正确使用Git Flow](https://www.cnblogs.com/wish123/p/9785101.html)
+- [git merge和git merge --no-ff的区别](https://www.jianshu.com/p/418323ed2b03)
