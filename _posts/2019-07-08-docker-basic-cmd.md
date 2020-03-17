@@ -112,3 +112,7 @@ bf08b7f2cd89        training/webapp     ...        0.0.0.0:5000->5000/tcp    wiz
 randle@H:~$ docker rm wizardly_chandrasekhar
 Error response from daemon: You cannot remove a running container bf08b7f2cd897b5964943134aa6d373e355c286db9b9885b1f60b6e8f82b2b85. Stop the container before attempting removal or force remove
 ```
+
+# 退出
+
+通过 bash 进入一个容器后，调试之后，让容器继续运行，可以使用 Ctrl+P+Q。注意 P 和 Q 需要大写。
