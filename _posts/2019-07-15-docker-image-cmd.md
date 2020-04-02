@@ -10,8 +10,6 @@ tags:
     - Docker
 ---
 
-
-
 当运行容器时，使用的镜像如果在本地中不存在，docker 就会自动从 docker 镜像仓库中下载，默认是从 Docker Hub 公共镜像源下载。
 
 # 镜像列表
@@ -19,16 +17,16 @@ tags:
 可以使用 docker images 来列出本地主机上的镜像。
 
 ```shell
-randle@H:~$ docker images           
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu              14.04               90d5884b1ee0        5 days ago          188 MB
-php                 5.6                 f40e9e0f10c8        9 days ago          444.8 MB
-nginx               latest              6f8d099c3adc        12 days ago         182.7 MB
-mysql               5.6                 f2e8d6c772c0        3 weeks ago         324.6 MB
-httpd               latest              02ef73cf1bc0        3 weeks ago         194.4 MB
-ubuntu              15.10               4e3b13c8a266        4 weeks ago         136.3 MB
-hello-world         latest              690ed74de00f        6 months ago        960 B
-training/webapp     latest              6fae60ef3446        11 months ago       348.8 MB
+$ docker images           
+REPOSITORY          TAG        IMAGE ID            CREATED             SIZE
+ubuntu              14.04      90d5884b1ee0        5 days ago          188 MB
+php                 5.6        f40e9e0f10c8        9 days ago          444.8 MB
+nginx               latest     6f8d099c3adc        12 days ago         182.7 MB
+mysql               5.6        f2e8d6c772c0        3 weeks ago         324.6 MB
+httpd               latest     02ef73cf1bc0        3 weeks ago         194.4 MB
+ubuntu              15.10      4e3b13c8a266        4 weeks ago         136.3 MB
+hello-world         latest     690ed74de00f        6 months ago        960 B
+training/webapp     latest     6fae60ef3446        11 months ago       348.8 MB
 ```
 
 - REPOSITORY：表示镜像的仓库源
@@ -42,7 +40,7 @@ training/webapp     latest              6fae60ef3446        11 months ago       
 所以，我们如果要使用版本为15.10的ubuntu系统镜像来运行容器时，命令如下：
 
 ```shell
-randle@H:~$ docker run -t -i ubuntu:15.10 /bin/bash 
+$ docker run -t -i ubuntu:15.10 /bin/bash 
 root@d77ccb2e5cca:/#
 ```
 如果你不指定一个镜像的版本标签，例如你只使用 ubuntu，docker 将默认使用 ubuntu:latest 镜像。
@@ -52,7 +50,7 @@ root@d77ccb2e5cca:/#
 当我们在本地主机上使用一个不存在的镜像时 Docker 就会自动下载这个镜像。如果我们想预先下载这个镜像，我们可以使用 docker pull 命令来下载它。
 
 ```shell
-randle@H:~$ docker pull ubuntu:13.10
+$ docker pull ubuntu:13.10
 13.10: Pulling from library/ubuntu
 6599cadaf950: Pull complete 
 23eda618d451: Pull complete 
@@ -68,7 +66,7 @@ Status: Downloaded newer image for ubuntu:13.10
 我们也可以使用 docker search 命令来搜索镜像。比如我们需要一个httpd的镜像来作为我们的web服务。我们可以通过 docker search 命令搜索 httpd 来寻找适合我们的镜像。
 
 ```shell
-randle@H:~$  docker search httpd
+$  docker search httpd
 ```
 - NAME:镜像仓库源的名称
 - DESCRIPTION:镜像的描述
@@ -87,7 +85,7 @@ randle@H:~$  docker search httpd
 我们可以通过命令 docker commit来提交容器副本。
 
 ```shell
-randle@H:~$ docker commit -m="has update" -a="runoob" e218edb10161 runoob/ubuntu:v2
+$ docker commit -m="has update" -a="runoob" e218edb10161 runoob/ubuntu:v2
 sha256:70bf1840fd7c0d2d8ef0a42a817eb29f854c1af8f7c59fc03ac7bdee9545aff8
 ```
 
@@ -103,7 +101,7 @@ sha256:70bf1840fd7c0d2d8ef0a42a817eb29f854c1af8f7c59fc03ac7bdee9545aff8
 使用命令 docker build ， 从零开始来创建一个新的镜像。为此，我们需要创建一个 Dockerfile 文件，其中包含一组指令来告诉 Docker 如何构建我们的镜像。
 
 ```shel
-randle@H:~$ cat Dockerfile 
+$ cat Dockerfile 
 FROM    centos:6.7
 MAINTAINER      Fisher "fisher@sudops.com"
 
@@ -124,7 +122,7 @@ RUN 指令告诉docker 在镜像内执行命令，安装了什么。。。
 然后，我们使用 Dockerfile 文件，通过 docker build 命令来构建一个镜像。
 
 ```shell
-runoob@runoob:~$ docker build -t runoob/centos:6.7 .
+$ docker build -t runoob/centos:6.7 .
 Sending build context to Docker daemon 17.92 kB
 Step 1 : FROM centos:6.7
  ---&gt; d95b5ca17cc3
@@ -147,6 +145,16 @@ Step 4 : RUN useradd runoob
 我们可以使用 docker tag 命令，为镜像添加一个新的标签。
 
 ```shell
-randle@H:~$ docker tag 860c279d2fec runoob/centos:dev
+$ docker tag 860c279d2fec runoob/centos:dev
 ```
 docker tag 镜像ID，这里是 860c279d2fec ,用户名称、镜像源名(repository name)和新的标签名(tag)。
+
+# 查看镜像构建过程
+
+可以通过 `history` 命令查看镜像的构建过程，`--no-trunc` 显示完整信息。
+
+```
+docker history CONTAINER
+docker history --no-trunc CONTAINER
+```
+
