@@ -1,21 +1,16 @@
-> Yet another man.
+> Your time is limited, so don’t waste it living someone else’s life. 
 
-Hi, I am _@huxpro_ (Huang, Xuan), a software engineer & a designer. I am currently working on programming langugaes at [Facebook](https://www.facebook.com/). I previously worked as Web Front-End Engineer at [Alibaba Trip](https://www.alitrip.com/); Web Front-End Infrastructure Team Lead at [Wepiao.com](https://www.crunchbase.com/organization/wepiao#/entity); And [Invited Consultant on PWA](<(https://medium.com/elemefe/upgrading-ele-me-to-progressive-web-app-2a446832e509)>) at [Ele.me](https://github.com/elemefe/).
+Hi, I am _@huxpro_ (Huang, Xuan), a [Facebook](https://www.facebook.com/) software engineer and a degreed digital designer. My interests range from programming languages in general (type system, type-based formal verification, compilers, runtime systems, garbage collection) to indurstial software engineering (web/mobile app development, user interface and UX, developer infrastructure and DX). 
 
-I studied Digital Media Art and graduated from [Communication University of China](https://en.wikipedia.org/wiki/Communication_University_of_China) by 2016, and am studying Computer Science at [Rochester Institute of Technology](https://en.wikipedia.org/wiki/Rochester_Institute_of_Technology) from 2017.
+In the past, I worked on [Alitrip (Fliggy)](https://www.alitrip.com/) mobile and web apps under the [Alibaba Group](https://en.wikipedia.org/wiki/Alibaba_Group), found and lead front-end infrastructure team at a unicorn startup [Beijing Weiying (WePiao)](https://www.crunchbase.com/organization/beijing-weiying-technology), and helped [Ele.me](https://en.wikipedia.org/wiki/Ele.me) to upgrade their mobile web into [the first influential PWA (progressive web app) in China](https://medium.com/elemefe/upgrading-ele-me-to-progressive-web-app-2a446832e509).
 
-##### My Programming Languages Spectrum
+I studied BA, Digital Media Art at [Communication University of China](https://en.wikipedia.org/wiki/Communication_University_of_China) and MS, Computer Science with a focus on programming languages at [Rochester Institute of Technology](https://en.wikipedia.org/wiki/Rochester_Institute_of_Technology).
 
-|     | 💔️           | ❤️ ️                                          | ❤️❤️ ️                                          | ❤️❤️❤️ ️                                      |
-| --- | ------------- | --------------------------------------------- | ----------------------------------------------- | --------------------------------------------- |
-| 😅  | `PHP` `BASIC` | `C` `Prolog` <br> `Objective-C`               | `Kotlin` `Dart` `MIPS`                          | `Swift` `Agda` `Idris`                        |
-| 🧐  |               | `C++` `Hack` <br> `Scheme` `Racket` `Clojure` | `C++ >11` `C#` `Typed Py` <br> `ActionScript 3` | `Scala` `Rust`                                |
-| 😏  | `Shell`       | `Java` `Python`                               | `TypeScript` `Flow` `WASM`                      | `Haskell` `Coq` <br> `SML` `OCaml` `ReasonML` |
-| 🤓  |               | `JavaScript`                                  | `Javascript >ES6`                               | `λ` `Λ` `Π` `Σ`                               |
+##### [My PL Spectrum (WIP 🚧)](https://huangxuan.me/2020/05/05/pl-chart/)
 
-> To be continue: `Fortran` `Smalltalk` `Pascal` `Forth` `Ruby` `CoffeeScript` `Go` `Elm` `Erlang` `Elixir` `F#` `F*` `Q#` `Nim` `Haxe` `Cyclone` `VimScript` `Perl` `Lua` `AppleScript`
+I made a chart to visualize my experiences and interests on some of the programming languages.   I know, I know this could be very contraversial. But it's a quite self-entertaining side project to do right? So have fun and don't take it too serious!
 
-##### Talks
+##### Appearence
 
 - [Upgrading to Progressive Web Apps][9] · [JSConf China Shanghai 2017](http://2017.jsconf.cn/)
 - Building Progressive Web Apps · [CSDI Guangzhou 2017](http://www.csdisummit.com/)
