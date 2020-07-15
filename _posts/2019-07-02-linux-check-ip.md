@@ -7,6 +7,7 @@ author:       "Randle"
 comments: true
 tags:
     - Linux
+    - Network
 ---
 Linux 中查看本机 ip 地址有两种方式：
 
