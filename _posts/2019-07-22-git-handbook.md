@@ -51,6 +51,7 @@ git branch -d $BRANCH_NAME          # 删除本地分支
 git branch -D $BRANCH_NAME          # 强制删除，未合并分支删除需强制
 git branch -r -d $BRANCH_NAME       # 删除远端分支
 git branch -f master HEAD~3         # master分支强行指定到HEAD~3
+git branch -vv 			    # 查看分支跟踪情况
 git checkout master~2 makefile      # 操作的是HEAD引用,从一个提交中检出文件
 git checkout -- '*.c'               # 丢弃所有 .c 文件的工作区修改
 git checkout .                      # 丢弃所有文件的工作区修改
@@ -121,6 +122,22 @@ git config --global alias.ci commit
 git config --global alias.co checkout
 git config --global alias.lg 'log --graph --pretty=oneline --abbrev-commit'
 ```
+## 修改分支名字
+
+本地分支重命名
+```
+git branch -m oldName newName
+```
+
+远程分支重命名
+
+```
+git branch -m oldName newName
+git push --delete origin oldName
+git push origin newName
+git branch --set-upstream-to origin/newName
+```
+
 
 ## 参考资料
 - [git 教程](https://www.yiibai.com/git)  
