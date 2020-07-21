@@ -64,7 +64,14 @@ kramdown:
 # Netease settings
 netease_comment: false
 
-
+# gitalk settings
+gitalk:
+   enable: true
+   owner: junqianghan
+   repo: junqianghan.github.io
+   clientID: 8be790d60ea054004cbb
+   clientSecret: 0c25508130a46a9e185a09238c412781eea5dd43
+   admin: junqianghan
 
 # Analytics settings
 # Baidu Analytics 
