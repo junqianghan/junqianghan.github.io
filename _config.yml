@@ -147,5 +147,8 @@ friends: [
     },{
         title: "阮一峰",
         href: "http://www.ruanyifeng.com/home.html"
+    },{
+        title: "帅帅的试点站",
+        href: "https://wongds.top"
     }
 ]
