@@ -144,5 +144,8 @@ friends: [
     },{
         title: "酷壳-CoolShell",
         href: "https://coolshell.cn/"
+    },{
+        title: "阮一峰",
+        href: "http://www.ruanyifeng.com/home.html"
     }
 ]
