@@ -188,9 +188,61 @@ select c1 from $table where c1 LIKE '_kile';
 
 ## 插入数据
 
+插入完整行
 
+```mysql
+insert into $table values(c1_value,c2_value,c3_value,c4_value...)；
+
+#更安全的方法
+insert into $table(c1,c2,c3) values(c1_value,c2_value,c3_value);
+
+#插入多行
+insert into $table(c1,c2,c3) values(c1_value,c2_value,c3_value),(c1_value2,c2_value2,c3_value2);
+```
+
+插入检索出的数据
+
+```mysql
+insert into $table(c1,c2) select b1,b2 from $table2;
+```
 
 ## 更新删除
+
+更新表项
+
+```mysql
+update $table set c1='' where c2=2;
+update $table set c1='1',c2='2' where c3='3';
+```
+
+删除
+
+```mysql
+delete from $table where id=1;
+```
+
+delete 不需要列名或通配符。delete删除整行而不是删除列。为了删除指定的列，请使用update。delete 删除表的内容，但是不删除表本身。
+
+从表中删除所有行，有一个更快的替代命令
+
+```mysql
+truncate table $table
+```
+
+TRUNCATE TABLE 在功能上与不带 WHERE 子句的 DELETE 语句相同：二者均删除表中的全部行。但 TRUNCATE TABLE 比 DELETE 速度快，且使用的系统和事务日志资源少。
+
+
+DELETE 语句每次删除一行，并在事务日志中为所删除的每行记录一项。TRUNCATE TABLE 通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。
+
+
+TRUNCATE TABLE 删除表中的所有行，但表结构及其列、约束、索引等保持不变。新行标识所用的计数值重置为该列的种子。如果想保留标识计数值，请改用 DELETE。如果要**删除表定义及其数据**，请使用 **DROP TABLE** 语句。
+
+对于由 FOREIGN KEY 约束引用的表，不能使用 TRUNCATE TABLE，而应使用不带 WHERE 子句的 DELETE 语句。由于 TRUNCATE TABLE 不记录在日志中，所以它不能激活触发器。
+
+TRUNCATE TABLE 不能用于参与了索引视图的表。
+
+对用TRUNCATE TABLE删除数据的表上增加数据时，要使用UPDATE STATISTICS来维护索引信息。
+
 
 
 
