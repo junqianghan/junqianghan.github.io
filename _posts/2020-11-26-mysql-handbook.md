@@ -141,10 +141,10 @@ select c1 from $table where c1 in (1,2);
 select c1 from $table where c1 NOT IN (1,2);
 
 #LIKE 通配符
-#%通配符
+#%通配符，任意字符
 select c1 from $table where c1 LIKE '%a%';
 
-#_下划线通配符
+#_下划线通配符，单个字符
 select c1 from $table where c1 LIKE '_kile';
 ```
 
@@ -257,6 +257,35 @@ where prod_name regexp '[123] ton';
 
 
 ## 计算字段
+
+### 拼接
+
+```mysql
+#Concat
+select Concat(vendor_name,'(',vendor_country,')') from vendors order by vendor_name;
+
+#RTrim()
+select Concat(RTrim(vendor_name),'(',vendor_country,')') as vend_title from vendors order by vendor_name;
+```
+
+Trim函数，RTrim() 去掉串右边的空格，LTrim() 去掉串左边的空格。
+
+MySQL 支持很多函数，参考：https://www.runoob.com/mysql/mysql-functions.html
+
+### 算数运算
+
+```mysql
+select quantity*item_price as expanded_price from orderitems;
+```
+
+MySQL 算数操作符
+
+| 操作符 | 说明 |
+| :----: | :--: |
+|  `+`   |  加  |
+|  `-`   |  减  |
+|  `*`   |  乘  |
+|  `/`   |  除  |
 
 
 
