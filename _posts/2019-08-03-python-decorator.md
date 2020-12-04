@@ -83,7 +83,7 @@ def func():
     print 'hello'
 ```
 
-这种情况理解起来也很容易，`decorator('arg')`的返回结果时一个装饰器，即上述装饰器写法等价于：
+这种情况理解起来也很容易，`decorator('arg')`的返回结果是一个装饰器，即上述装饰器写法等价于：
 
 ```python
 func = decorator('arg')(func)
@@ -152,7 +152,7 @@ class ImportantStuff:
     def do_stuff_3(self):
         ...
 ```
-这种装饰器写法，与前文的函数装饰器写法，作用基本相同，相同与下面这种写法：
+这种装饰器写法，与前文的函数装饰器写法，作用基本相同，与下面这种写法相同：
 ```python
 ImportantStuff = time_all_class_methods(ImportantStuff)
 ```
@@ -322,7 +322,7 @@ A.class_foo(1)
 # executing class_foo(<class '__main__.A'>,1)
 ```
 
-`classmethod`最大的有点在于，与`method`绑定的第一个参数是实际的类，在继承体系中，子类继承父类的`classmethod`，不同的子类中，`cls`是不同的，对于工厂模式的实现非常便利。
+`classmethod`最大的优点在于，与`method`绑定的第一个参数是实际的类，在继承体系中，子类继承父类的`classmethod`，不同的子类中，`cls`是不同的，对于工厂模式的实现非常便利。
 
 再谈到前面的实例，三种类型的`method`，查看其类型，可以得到下面的结果：
 ```python
