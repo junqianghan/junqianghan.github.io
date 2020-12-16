@@ -158,3 +158,16 @@ docker history CONTAINER
 docker history --no-trunc CONTAINER
 ```
 
+# 下载上传
+
+```shell
+#下载
+docker save -o image_name.tar image_name:tag
+
+#加载镜像
+docker load --input image_name.tar 
+
+#打标签
+docker tag origin_tag new_tag
+```
+
