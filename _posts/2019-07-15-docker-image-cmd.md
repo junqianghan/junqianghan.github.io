@@ -158,6 +158,12 @@ docker history CONTAINER
 docker history --no-trunc CONTAINER
 ```
 
+# 删除镜像
+
+```shell
+docker rmi image_id
+```
+
 # 下载上传
 
 ```shell
