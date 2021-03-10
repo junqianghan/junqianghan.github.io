@@ -6,6 +6,7 @@ date:         2019-07-15 00:02:00
 author:       "Randle"
 catalog:      true
 comments: true
+permalink: /docker-image-cmd.html
 tags:
     - Docker
 ---
