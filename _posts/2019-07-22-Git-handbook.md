@@ -140,6 +140,18 @@ git push origin newName
 git branch --set-upstream-to origin/newName
 ```
 
+## Git Windows
+
+在Windows下使用git，安装包如下：
+
+https://git-for-windows.github.io/
+
+在使用git bash时git 默认中文文件名是 `xx%`，是因为 对0x80以上的字符进行 quote ，只需要
+```
+git config --global core.quotepath false
+```
+core.quotepath 设为 false 的话，就不会对 0x80 以上的字符进行 quote ，中文显示正常。
+
 
 ## 参考资料
 - [git 教程](https://www.yiibai.com/git)  
